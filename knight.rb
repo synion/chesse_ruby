@@ -19,10 +19,6 @@ class Knight
   end
 
 
-  def view
-    convert_position.join(' ')
-  end
-
   def to_s
     "#{view}"
   end
@@ -30,6 +26,9 @@ class Knight
 
 private
 
+  def view
+    convert_position.join(' ')
+  end
 
   def posible
     VECTORS.map{|x,y| [x + self.cord_x, y + self.cord_y]  }
